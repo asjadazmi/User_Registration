@@ -43,19 +43,35 @@ public class UserRegistration {
 			System.out.println("not valid");
 		}
 	}
+//	Mobile Format
+	public static void mobileValidation(String mobile) {
+		String mobileRegex="^(91|0)?[7-9]{1}+[0-9]{9}$";
+		Pattern pattern=Pattern.compile(mobileRegex);
+		Matcher matcher=pattern.matcher(mobile);
+		if(matcher.find()) {
+			System.out.println("its valid ");
+		}
+		else {
+			System.out.println("not valid");
+		}
+		
+	}
 	public static void main(String[] args) {
 		System.out.println("Welcome to the user registration !");
 		UserRegistration v = new UserRegistration();
-	Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the first name");
-		String firstName = sc.next();
-		v.firstNameValidation(firstName);
-		System.out.println("Enter the last name");
-		String lastName = sc.next();
-	    v.lastNameValidation(lastName);
-	    System.out.println("Enter your email");
-		String email = sc.next();
-	    v.emailValidation(email);
+	    Scanner sc=new Scanner(System.in);
+//		System.out.println("Enter the first name");
+//		String firstName = sc.next();
+//		v.firstNameValidation(firstName);
+//		System.out.println("Enter the last name");
+//		String lastName = sc.next();
+//	    v.lastNameValidation(lastName);
+//	    System.out.println("Enter your email");
+//		String email = sc.next();
+//	    v.emailValidation(email);
+	    System.out.println("Enter your mobile number");
+		String mobile = sc.next();
+	    v.mobileValidation(mobile);
 	    
 	}
 	
