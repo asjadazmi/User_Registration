@@ -16,7 +16,6 @@ public class UserRegistration {
 			else {
 				System.out.println("its not valid");
 			}
-			
 		}
 //	LastName
 	public static void lastNameValidation(String name) {
@@ -54,25 +53,39 @@ public class UserRegistration {
 		else {
 			System.out.println("not valid");
 		}
-		
-	}
+    }
+//	password rule 1
+	public static void passwordValidationRule1(String password) {
+		String passwordRegex="^([A-Za-z0-9]*[//!//@//#//$//%//^//&//*//(//)//_//-//+//=//{//}//[//]//?//>//.//<//,//]*){8}$";
+		Pattern pattern=Pattern.compile(passwordRegex);
+		Matcher matcher=pattern.matcher(password);
+		if(matcher.find()) {
+			System.out.println("its valid");
+		}
+		else {
+			System.out.println("not valid");
+		}
+}
+	
 	public static void main(String[] args) {
 		System.out.println("Welcome to the user registration !");
 		UserRegistration v = new UserRegistration();
 	    Scanner sc=new Scanner(System.in);
-//		System.out.println("Enter the first name");
-//		String firstName = sc.next();
-//		v.firstNameValidation(firstName);
-//		System.out.println("Enter the last name");
-//		String lastName = sc.next();
-//	    v.lastNameValidation(lastName);
-//	    System.out.println("Enter your email");
-//		String email = sc.next();
-//	    v.emailValidation(email);
+		System.out.println("Enter the first name");
+		String firstName = sc.next();
+		v.firstNameValidation(firstName);
+		System.out.println("Enter the last name");
+		String lastName = sc.next();
+	    v.lastNameValidation(lastName);
+	    System.out.println("Enter your email");
+		String email = sc.next();
+	    v.emailValidation(email);
 	    System.out.println("Enter your mobile number");
 		String mobile = sc.next();
 	    v.mobileValidation(mobile);
-	    
+	    System.out.println("Enter your password number");
+		String password = sc.next();
+	    v.passwordValidationRule1(password);
 	}
 	
 	}
