@@ -20,7 +20,7 @@ public class UserRegistrationMain {
             first_name = sc.next();
         }
         
-        System.out.println("Please enter last name: ");
+        System.out.println("Please enter last name  : ");
         String last_name = sc.next();
         try {
             v.lastNameValidation(last_name);
