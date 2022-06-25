@@ -6,7 +6,9 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
 
-//	FirstName
+
+
+	//	FirstName
 	public static void firstNameValidation(String name) {
 			String firstNameRegex="^[A-Z]{1}[a-z]{2,}$";
 			Pattern pattern=Pattern.compile(firstNameRegex);
@@ -134,6 +136,78 @@ public class UserRegistration {
 	    System.out.println("Enter your password number");
 		String password4 = sc.next();
 	    v.passwordValidationRule4(password4);
+	    
+//	    UC_9 check for all the seprately
+	    System.out.println("--checking for the valid email--");
+	    email = "abc@yahoo.com";
+	    emailValidation(email);
+
+        email = "abc-100@yahoo.com";
+        emailValidation(email);
+
+        email = "abc.100@yahoo.com";
+        emailValidation(email);
+
+        email = "abc111@abc.com";
+        emailValidation(email);
+
+        email = "abc-100@abc.net";
+        emailValidation(email);
+
+        email = "abc.100@abc.com.au";
+        emailValidation(email);
+
+        email = "abc@1.com";
+        emailValidation(email);
+
+        email = "abc@gmail.com.com";
+        emailValidation(email);
+
+        email = "abc+100@gmail.com";
+        emailValidation(email);
+        
+        
+        System.out.println("checking for invalid email");
+        
+        
+        email = "abc";
+        emailValidation(email);
+
+        email = "abc@.com.my";
+        emailValidation(email);
+
+        email = "abc123@gmail.a";
+        emailValidation(email);
+
+        email = "abc123@.com";
+        emailValidation(email);
+
+        email = "abc123@.com.com";
+        emailValidation(email);
+
+        email = ".abc@abc.com";
+        emailValidation(email);
+
+        email = "abc()*@gmail.com";
+        emailValidation(email);
+
+        email = "abc@%*.com";
+        emailValidation(email);
+
+        email = "abc..2002@gmail.com";
+        emailValidation(email);
+
+        email = "abc.@gmail.com";
+        emailValidation(email);
+
+        email = "abc@abc@gmail.com";
+        emailValidation(email);
+
+        email = "abc@gmail.com.1a";
+        emailValidation(email);
+
+        email = "abc@gmail.com.aa.au";
+        emailValidation(email);
 	
 	}
 	
